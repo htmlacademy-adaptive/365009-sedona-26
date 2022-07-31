@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo logo">
+        <img class="logo__image" src="#" alt="Гостиницы Седоны." width="185" height="96">
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/">Html academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="inner-page">
+      <h1 class="visually-hidden">Страница отзыва</h1>
+      <div class="inner-page__inner-logo-wrapper">
+        <img class="inner-page__inner-logo" src="#" alt="Седона.">
+      </div>
+      <p class="inner-page__subtitle">Оставтьте свой отзыв</p>
+      <section class="review">
+        <h2 class="visually-hidden">Отзыв о поездке</h2>
+        <p class="review__slogan">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
+        <form class="review__form review-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="review-form__group-name-inputs inputs-group">
+            <legend class="inputs-group__group-title">Представтись:</legend>
+            <ul class="inputs-group__list">
+              <li class="inputs-group__item text-input">
+                <label class="text-input__label" for="name">Имя*:</label>
+                <input class="text-input__input" type="text" id="name" name="name" placeholder="Имя" required>
+              </li>
+              <li class="inputs-group__item text-input">
+                <label class="text-input__label" for="surname">Фамилия*:</label>
+                <input class="text-input__input" type="text" id="surname" name="surname" placeholder="Фамилия" required>
+              </li>
+              <li class="inputs-group__item text-input">
+                <label class="text-input__label" for="patronymic">Отчество:</label>
+                <input class="text-input__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__group-inputs inputs-group">
+            <legend class="inputs-group__group-title">Контактная информация:</legend>
+            <ul class="inputs-group__list">
+              <li class="inputs-group__item text-input">
+                <label class="text-input__label" for="contact-number">Контактный телефон*:</label>
+                <input class="text-input__input" type="tel" id="contact-number" name="contact-number" placeholder="Введите телефон" required>
+              </li>
+              <li class="inputs-group__item text-input">
+                <label class="text-input__label" for="email">Электронная почта*:</label>
+                <input class="text-input__input" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__group-inputs inputs-group">
+            <legend class="inputs-group__group-title">Ваше общее впечатление:</legend>
+            <ul class="inputs-group__list">
+              <li class="inputs-group__item choice-input">
+                <input class="choice-input__radio" type="radio" id="rather-positive" name="impression" value="rather-positive" checked>
+                <label class="choice-input__label" for="rather-positive">Скорее положительное</label>
+              </li>
+              <li class="inputs-group__item choice-input">
+                <input class="choice-input__radio" type="radio" id="rather-negative" name="impression" value="rather-negative">
+                <label class="choice-input__label" for="rather-negative">Скорее отрицательное</label>
+              </li>
+              <li class="inputs-group__item choice-input">
+                <input class="choice-input__radio" type="radio" id="controversial" name="impression" value="controversial">
+                <label class="choice-input__label" for="controversial">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__group-inputs inputs-group">
+            <legend class="inputs-group__group-title">Посещенные достопримечательности:</legend>
+              <ul class="inputs-group__list">
+                <li class="inputs-group__item choice-input">
+                  <input class="choice-input__checkbox" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
+                  <label class="choice-input__label" for="devil-bridge">Мост Дьявола</label>
+                </li>
+                <li class="inputs-group__item choice-input">
+                  <input class="choice-input__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell" checked>
+                  <label class="choice-input__label" for="mountain-bell">Гора-Колокол</label>
+                </li>
+                <li class="inputs-group__item choice-input">
+                  <input class="choice-input__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
+                  <label class="choice-input__label" for="slide-park">Слайд-парк</label>
+                </li>
+                <li class="inputs-group__item choice-input">
+                  <input class="choice-input__checkbox" type="checkbox" id="red-rocks" name="red-rocks">
+                  <label class="choice-input__label" for="red-rocks">Красные скалы</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="review-form__group-inputs inputs-group">
+            <legend class="inputs-group__group-title">Опишите свои эмоции:</legend>
+            <textarea class="inputs-group__text-area" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="review-form__button button" type="submit">Отправить отзыв</button>
+          <p class="review-form__footnote">* - Обязательные поля</p>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__hashtag sedona-hashtag">#Visitsedona</div>
+      <ul class="site-footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vkontakte" href="#">
+            <span class="visually-hidden">Мы во Вконтакте.</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--telegram" href="#">
+            <span class="visually-hidden">Мы в Телеграм.</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="#">
+            <span class="visually-hidden">Мы на Youtube.</span>
+          </a>
+        </li>
+      </ul>
+      <a class="copyright">
+        <div class="copyright__text">Разработано</div>
+        <img class="copyright__image" src="#" alt="Логотип html academy.">
+      </a>
+    </footer>
+    <div class="inner-page__modal-wrapper">
+      <div class="modal">
+        <section class="modal__content">
+          <h2 class="modal__title">Что то пошло не так!</h2>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__button button">Ок</button>
+        </section>
+        <section class="modal__content modal__content--valid">
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+          <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте</p>
+          <div class="modal__button-wrapper">
+            <button class="modal__button button">Закрыть окно</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
