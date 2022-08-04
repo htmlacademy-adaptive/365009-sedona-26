@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -29,11 +30,11 @@
         </ul>
       </nav>
     </header>
-    <main class="inner-page">
-      <div class="inner-page__logo-wrapper">
-        <img class="inner-page__inner-logo" src="#" alt="Седона.">
+    <main class="page-content">
+      <div class="page-content__logo-wrapper">
+        <img class="page-content__logo" src="#" alt="Седона.">
       </div>
-      <h1 class="inner-page__title title">Оставтьте свой отзыв</h1>
+      <h1 class="page-content__title title">Оставтьте свой отзыв</h1>
       <section class="review">
         <h2 class="visually-hidden">Форма отзыва</h2>
         <p class="review__description section-description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
@@ -43,15 +44,15 @@
             <ul class="inputs-group__list">
               <li class="inputs-group__item text-input">
                 <label class="text-input__label" for="name">Имя*:</label>
-                <input class="text-input__input" type="text" id="name" name="name" placeholder="Имя" required>
+                <input class="text-input__field" type="text" id="name" name="name" placeholder="Имя" required>
               </li>
               <li class="inputs-group__item text-input">
                 <label class="text-input__label" for="surname">Фамилия*:</label>
-                <input class="text-input__input" type="text" id="surname" name="surname" placeholder="Фамилия" required>
+                <input class="text-input__field" type="text" id="surname" name="surname" placeholder="Фамилия" required>
               </li>
               <li class="inputs-group__item text-input">
                 <label class="text-input__label" for="patronymic">Отчество:</label>
-                <input class="text-input__input" type="text" id="patronymic" name="patronymic" placeholder="Отчество">
+                <input class="text-input__field" type="text" id="patronymic" name="patronymic" placeholder="Отчество">
               </li>
             </ul>
           </fieldset>
@@ -60,11 +61,11 @@
             <ul class="inputs-group__list">
               <li class="inputs-group__item text-input">
                 <label class="text-input__label" for="contact-number">Контактный телефон*:</label>
-                <input class="text-input__input" type="tel" id="contact-number" name="contact-number" placeholder="Введите телефон" required>
+                <input class="text-input__field" type="tel" id="contact-number" name="contact-number" placeholder="Введите телефон" required>
               </li>
               <li class="inputs-group__item text-input">
                 <label class="text-input__label" for="email">Электронная почта*:</label>
-                <input class="text-input__input" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+                <input class="text-input__field" type="email" id="email" name="email" placeholder="Введите e-mail" required>
               </li>
             </ul>
           </fieldset>
@@ -107,8 +108,11 @@
               </ul>
           </fieldset>
           <div class="review-form__group-inputs inputs-group">
-            <label class="inputs-group__title" for="emotions">Опишите свои эмоции:</label>
-            <textarea class="inputs-group__text-area" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <h3 class="inputs-group__title">Опишите свои эмоции:</h3>
+            <div class="inputs-group__item textarea-input">
+              <label class="visually-hidden" for="emotions">Эмоции</label>
+              <textarea class="textarea-input__field" name="emotions" id="emotions" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            </div>
           </div>
           <button class="review-form__button button" type="submit">Отправить отзыв</button>
           <p class="review-form__footnote">* - Обязательные поля</p>
@@ -139,7 +143,7 @@
         <img class="copyright__image" src="#" alt="Логотип html academy.">
       </a>
     </footer>
-    <div class="inner-page__modal-wrapper">
+    <div class="page-content__modal-wrapper">
       <div class="modal">
         <section class="modal__content">
           <h2 class="modal__title title">Что то пошло не так!</h2>
