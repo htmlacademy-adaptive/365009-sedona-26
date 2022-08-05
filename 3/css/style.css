@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.page__body {
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.page-content__logo-wrapper {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 85px;
+  background-image: url("../../img/background-image-mobile-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #6c390f;
+}
+.page-content__logo-wrapper--inner {
+  background-image: url("../../img/background-image-mobile-2.jpg");
+  padding-top: 52px;
+  padding-bottom: 67px;
+}
+.title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+.section-description {
+  text-align: center;
+}
+.button {
+  display: block;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0;
+  background-color: #81b3d2;
+  border: none;
+}
+.logo {
+  display: block;
+}
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.site-list__link {
+  display: block;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #81b3d2;
+}
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.advantages-list__image {
+  display: block;
+  margin: 0 auto;
+}
+.advantage {
+  text-align: center;
+  background-color: #eeeeee;
+}
+.advantage--detail {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.advantage--reason {
+  text-align: start;
+  background-color: #ffffff;
+}
+.advantage__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+.advantage__description {
+  margin: 0;
+}
+.gallery__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.post {
+  text-align: center;
+}
+.post__title {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+.post__author {
+  margin: 0;
+  text-transform: none;
+}
+.post__author-name {
+  font-style: normal;
+}
+.review__button {
+  margin: 0 auto;
+}
+.review__footnote {
+  font-size: 12px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  margin: 0;
+}
+.inputs-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+.inputs-group__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.inputs-group__title {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+.text-input__field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  border: none;
+}
+.text-input__field::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.choice-input__label {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: none;
+  font-weight: 700;
+}
+.textarea-input__field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  border: none;
+  resize: none;
+}
+.textarea-input__field::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+.modal__button {
+  margin: 0 auto;
+}
+.sedona-hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+.copyright {
+  color: #000000;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
