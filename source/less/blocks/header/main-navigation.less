@@ -1,1 +1,35 @@
 // styles
+.main-navigation {
+  position: relative;
+  min-height: 56px;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-color: tomato;
+  border: none;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.main-navigation__list {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__list {
+    position: static;
+  }
+}
