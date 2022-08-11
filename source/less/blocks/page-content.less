@@ -2,15 +2,46 @@
   text-align: center;
   padding-top: 90px;
   padding-bottom: 85px;
+  margin-bottom: 35px;
   background-image: url("../../img/background-image-mobile-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #6c390f;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
 
   &--inner {
     background-image: url("../../img/background-image-mobile-2.jpg");
     padding-top: 52px;
     padding-bottom: 67px;
+  }
+}
+
+.page-content__title {
+  margin-bottom: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-content__logo-wrapper {
+    padding-top: 77px;
+    padding-bottom: 91px;
+    background-image: url("../../img/background-image-desktop.jpg");
+
+    &--inner {
+      padding-top: 95px;
+      padding-bottom: 117px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-content__logo-wrapper {
+    padding-top: 78px;
+    padding-bottom: 90px;
+
+    &--inner {
+      padding-top: 101px;
+      padding-bottom: 120px;
+    }
   }
 }

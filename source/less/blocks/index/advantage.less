@@ -1,14 +1,25 @@
 .advantage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: #eeeeee;
-
+  padding: 18px;
   &--detail {
     color: #ffffff;
+    min-height: 191px;
     background-color: #81b3d2;
   }
 
+  &--first-size {
+    min-height: 204px;
+  }
+
   &--reason {
+    align-items: flex-start;
     text-align: start;
+    padding: 0 18px 0 18px;
     background-color: #ffffff;
   }
 }
@@ -18,6 +29,15 @@
   line-height: 26px;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 11px;
+}
+
+.advantage--reason .advantage__title {
+  margin-bottom: 16px;
+}
+
+.advantage__number {
+  margin-bottom: 17px;
 }
 
 .advantage__description {
