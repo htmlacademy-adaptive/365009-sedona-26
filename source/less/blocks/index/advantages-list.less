@@ -5,7 +5,48 @@
   clip-path: polygon(0% 100%, 0% 0%, 50% 1%, 100% 0%, 100% 100%);
 }
 
+.advantages-list__no-detail-container {
+  padding: 2px 18px 2px 18px;
+  background-color: #eeeeee;
+}
+
 .advantages-list__image {
   display: block;
   margin: 0 auto;
+}
+
+.advantages-list__sublist {
+  margin-top: 12px;
+  margin-bottom: 41px;
+  clip-path: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages-list {
+    clip-path: none;
+  }
+
+  .advantages-list__detail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages-list__image {
+    &--reverse {
+      order: -1;
+    }
+  }
+
+  .advantages-list__sublist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .advantages-list__no-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
