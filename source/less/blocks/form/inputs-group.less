@@ -1,8 +1,14 @@
 .inputs-group {
-  margin: 0;
-  padding: 0;
-  border: none;
+  position: relative;
   text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0 20px 39px 20px;
+  border-bottom: 1px solid #e5e5e5;
+
+  &--no-divider {
+    border-bottom: none;
+  }
 }
 
 .inputs-group__list {
@@ -12,8 +18,16 @@
 }
 
 .inputs-group__title {
+  // position: relative;
+  // top: 24px;
+  // left: 0;
+  // right: 0;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   font-weight: 700;
+  padding: 24px 0 20px 0;
+  width: 100%;
+  margin: 0 auto;
+  // box-shadow: 0 -1px 0 0 rgba(1, 1, 1, 20%);
 }

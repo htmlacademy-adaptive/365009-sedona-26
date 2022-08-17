@@ -1,6 +1,6 @@
 .gallery__description {
-  padding: 0 20px 0 20px;
-  margin-bottom: 36px;
+  padding: 0 20px 36px 20px;
+  border-bottom: 1px solid #e5e5e5;
   letter-spacing: -0.5px;
 }
 
@@ -11,6 +11,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery__description {
+    padding: 0 116px 36px 116px;
+    border-bottom: none;
+
+    .gallery__description-break-line {
+      display: none;
+    }
+  }
+
   .gallery__list {
     display: flex;
     flex-wrap: wrap;
@@ -28,5 +37,9 @@
 @media (min-width: @desktop-width) {
   .gallery__item {
     width: 33.33%;
+  }
+
+  .gallery__description {
+    padding: 0 392px 0 392px;
   }
 }
