@@ -1,9 +1,7 @@
 .inputs-group {
-  position: relative;
-  text-align: center;
-  border: none;
   margin: 0;
   padding: 0 20px 39px 20px;
+  border: none;
   border-bottom: 1px solid #e5e5e5;
 
   &--no-divider {
@@ -12,22 +10,57 @@
 }
 
 .inputs-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 .inputs-group__title {
-  // position: relative;
-  // top: 24px;
-  // left: 0;
-  // right: 0;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   font-weight: 700;
+  text-align: center;
   padding: 24px 0 20px 0;
-  width: 100%;
   margin: 0 auto;
-  // box-shadow: 0 -1px 0 0 rgba(1, 1, 1, 20%);
+}
+
+@media (min-width: @tablet-width) {
+  .inputs-group {
+    padding: 0;
+    margin-bottom: 48px;
+    border-bottom: none;
+
+    &:nth-child(1) {
+      padding: 0 43px 15px 0;
+      border-right: 1px solid #d8d8d8;
+    }
+
+    &:nth-child(2) {
+      padding: 0 0 15px 44px;
+    }
+  }
+
+  .inputs-group__title {
+    padding-bottom: 28px;
+  }
+
+  .inputs-group__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 32px;
+    margin: 0 auto;
+
+    &--radio {
+      max-width: 575px;
+    }
+
+    &--checkbox {
+      max-width: 480px;
+    }
+  }
 }

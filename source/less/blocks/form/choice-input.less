@@ -1,7 +1,56 @@
 .choice-input__label {
+  position: relative;
+  display: block;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   text-transform: none;
   font-weight: 700;
+  padding: 10px 10px 10px 62px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    left: 0;
+    top: 0;
+    background-color: #f2f2f2;
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &--checkbox::before {
+    border-radius: 4px;
+  }
+}
+
+.choice-input__control--radio:checked + .choice-input__label--radio::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 15px;
+  top: 15px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+.choice-input__label:hover.choice-input__label::before {
+  background-color: #e5e5e5;
+}
+
+.choice-input__label:active.choice-input__label::before {
+  background-color: #d5d5d5;
+}
+
+.choice-input__label:active.choice-input__label::after {
+  opacity: 0.3;
+}
+
+.choice-input__control:focus-visible + .choice-input__label::before {
+  border: 2px solid #81b3d2;
 }

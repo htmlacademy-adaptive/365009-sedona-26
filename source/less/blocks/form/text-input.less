@@ -1,14 +1,31 @@
+.text-input__label {
+  display: block;
+  padding-left: 16px;
+}
+
 .text-input__field {
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   font-weight: 700;
+  width: 100%;
+  padding: 16px;
   background-color: #f2f2f2;
   border: none;
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
     opacity: 1;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown) {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
   }
 }
