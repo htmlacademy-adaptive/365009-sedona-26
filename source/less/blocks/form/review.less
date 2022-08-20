@@ -3,8 +3,16 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.review__group-inputs {
+  border-bottom: 1px solid #e5e5e5;
+
+  &:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
+}
+
 .review__button-wrapper {
-  padding: 0 20px;
+  padding: 20px 17px 24px 17px;
 }
 
 .review__button {
@@ -29,6 +37,27 @@
   .review__form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .review__group-inputs {
+    margin-bottom: 28px;
+
+    &:nth-child(1) {
+      padding: 0 43px 15px 0;
+      border-right: 1px solid #dbdbdb;
+    }
+
+    &:nth-child(2) {
+      padding: 0 0 15px 44px;
+    }
+
+    &:not(:nth-of-type(-n+2)) {
+      border-top: 1px solid #dbdbdb;
+    }
+
+    &:nth-of-type(-n+2) {
+      margin-bottom: 48px;
+    }
   }
 
   .review__group-inputs:not(:nth-child(-n+2)) {
