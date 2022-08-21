@@ -1,15 +1,43 @@
 .advantage {
   text-align: center;
   background-color: #eeeeee;
+  padding: 40px 18px 35px 18px;
 
   &--detail {
     color: #ffffff;
     background-color: #81b3d2;
   }
 
+  &--first-size {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
   &--reason {
     text-align: start;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 51px;
     background-color: #ffffff;
+
+    &:first-child {
+      padding-top: 31px;
+    }
+
+    &:last-child {
+      padding-bottom: 52px;
+    }
+  }
+
+  &--no-detail {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0 18px;
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  &--no-border {
+    border-bottom: none;
   }
 }
 
@@ -18,8 +46,120 @@
   line-height: 26px;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 11px;
+}
+
+.advantage__number {
+  display: block;
+  margin-bottom: 17px;
 }
 
 .advantage__description {
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage {
+    min-height: 256px;
+    padding: 42px 30px;
+
+    &--detail {
+      width: 33.33%;
+    }
+
+    &--first-size {
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
+
+    &--reason {
+      text-align: center;
+      width: 33.33%;
+      min-height: 330px;
+      padding-top: 135px;
+      padding-right: 30px;
+      padding-bottom: 42px;
+      padding-left: 30px;
+
+      &:first-child {
+        padding-top: 135px;
+      }
+
+      &:last-child {
+        padding-bottom: 42px;
+      }
+    }
+
+    &--no-detail {
+      width: 33.33%;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      margin: 0;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .advantage__title {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  .advantage__title--reason {
+    margin-bottom: 22px;
+  }
+
+  .advantage__number {
+    margin-bottom: 23px;
+  }
+
+  .advantages-list__image {
+    width: 66.66%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage {
+    padding: 42px 62px;
+
+    &--detail {
+      width: 33.33%;
+      padding-top: 48px;
+    }
+
+    &--first-size {
+      padding-top: 48px;
+    }
+
+    &--reason {
+      text-align: center;
+      width: 33.33%;
+      min-height: 330px;
+      padding-top: 135px;
+      padding-right: 58px;
+      padding-bottom: 42px;
+      padding-left: 58px;
+
+      &:first-child {
+        padding-top: 135px;
+      }
+
+      &:last-child {
+        padding-bottom: 42px;
+      }
+    }
+
+    &--no-detail {
+      width: 33.33%;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      margin: 0;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+    }
+  }
 }
