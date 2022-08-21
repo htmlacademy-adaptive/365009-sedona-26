@@ -39,6 +39,16 @@
   border-radius: 50%;
 }
 
+.choice-input__control--checkbox:checked + .choice-input__label--checkbox::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 16px;
+  left: 12px;
+  top: 15px;
+  background-image: url(/img/form-check.svg);
+}
+
 .choice-input__label:hover.choice-input__label::before {
   background-color: #e5e5e5;
 }

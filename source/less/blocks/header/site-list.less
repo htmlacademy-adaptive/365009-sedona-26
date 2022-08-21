@@ -3,10 +3,6 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  &--close {
-    display: none;
-  }
 }
 
 .site-list__item .site-list__link {
@@ -34,6 +30,15 @@
   font-weight: 700;
   padding: 17px 20px 12px 20px;
   background-color: #81b3d2;
+
+  &:hover:not([class$="--current"]) {
+    background-color: #669ec0;
+  }
+
+  &:active:not([class$="--current"]) {
+    color: fade(#ffffff, 30%);
+    background-color: #5496BD;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -77,5 +82,19 @@
     color: #000000;
     padding: 18px 20px 17px 20px;
     background-color: #ffffff;
+
+    &:hover:not([class$="--current"]) {
+      color: #81b3d2;
+      background-color: #ffffff;
+    }
+
+    &:active:not([class$="--current"]) {
+      color: fade(#000000, 30%);
+      background-color: #ffffff;
+    }
+
+    &--current {
+      color: #766357;
+    }
   }
 }

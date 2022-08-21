@@ -1,3 +1,38 @@
+.text-input__decoration {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+
+  }
+
+  &--telephone::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background-image: url("/img/form-phone.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--email::after {
+    content: "";
+    position: absolute;
+    right: 21px;
+    top: 23px;
+    width: 16px;
+    height: 12px;
+    background-image: url("/img/form-email.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .text-input__label {
   display: block;
   padding-left: 16px;
