@@ -1,28 +1,86 @@
-// styles
-.main-navigation {
-  position: relative;
-  min-height: 56px;
-}
+@media (max-width: @mobile-width-only) {
+  .main-navigation {
+    position: relative;
+    min-height: 56px;
+  }
 
-.main-navigation__toggle {
-  position: absolute;
-  display: block;
-  width: 55px;
-  height: 55px;
-  background-color: #333333;
-  border: none;
-  right: 0;
-  top: 0;
-  z-index: 3;
-  cursor: pointer;
-}
+  .main-navigation__toggle {
+    position: absolute;
+    display: block;
+    color: #81b3d2;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    background-color: #ffffff;
+    border: none;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+  }
 
-.main-navigation__list {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
+  .main-navigation__list {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
 
+  .main-navigation--nojs .main-navigation__list {
+    position: static;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+
+  .main-navigation--opened .main-navigation__list {
+    display: block;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    color: #ffffff;
+    background-color: #81b3d2;
+  }
+
+  .main-navigation__icon {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: none;
+    }
+  }
+
+  .main-navigation--closed .main-navigation__icon--opened {
+    display: block;
+  }
+
+  .main-navigation--opened .main-navigation__icon--closed {
+    display: block;
+  }
+
+  .main-navigation__toggle:focus-visible {
+    outline: none;
+  }
+
+  .main-navigation__toggle:hover .main-navigation__icon,
+  .main-navigation__toggle:focus-visible .main-navigation__icon {
+    fill-opacity: 60%;
+  }
+
+  .main-navigation__toggle:active .main-navigation__icon {
+    fill-opacity: 30%;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .main-navigation__toggle {

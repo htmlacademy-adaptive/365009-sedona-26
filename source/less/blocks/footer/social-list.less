@@ -9,8 +9,25 @@
 }
 
 .social-list__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
   width: 48px;
   height: 48px;
   background-color: #81b3d2;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social-list__link:active .social-list__icon {
+  fill-opacity: 30%;
 }

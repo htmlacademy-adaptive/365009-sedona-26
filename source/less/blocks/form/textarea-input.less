@@ -18,4 +18,18 @@
     color: rgba(0, 0, 0, 0.3);
     opacity: 1;
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown) {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+    outline-offset: -4px;
+  }
+
+  &:focus:placeholder-shown {
+    outline: 2px solid #81b3d2;
+  }
 }

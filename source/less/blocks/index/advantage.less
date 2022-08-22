@@ -17,8 +17,10 @@
     text-align: start;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-left: 51px;
+    padding-left: 65px;
     background-color: #ffffff;
+    background-repeat: no-repeat;
+
 
     &:first-child {
       padding-top: 31px;
@@ -27,6 +29,24 @@
     &:last-child {
       padding-bottom: 52px;
     }
+  }
+
+  &--housing {
+    background-image: url("/img/reason-housing.svg");
+    background-size: 39px 36px;
+    background-position: 18px 25px;
+  }
+
+  &--food {
+    background-image: url("/img/reason-food.svg");
+    background-size: 40px 34px;
+    background-position: 18px 5px;
+  }
+
+  &--souvenirs {
+    background-image: url("/img/reason-souvenirs.svg");
+    background-size: 40px 34px;
+    background-position: 18px 5px;
   }
 
   &--no-detail {
@@ -88,6 +108,21 @@
       &:last-child {
         padding-bottom: 42px;
       }
+    }
+
+    &--housing {
+      background-size: 75px 72px;
+      background-position: 50% 33px;
+    }
+
+    &--food {
+      background-size: 76px 68px;
+      background-position: 50% 33px;
+    }
+
+    &--souvenirs {
+      background-size: 64px 75px;
+      background-position: 50% 33px;
     }
 
     &--no-detail {
