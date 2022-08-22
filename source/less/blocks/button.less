@@ -12,13 +12,15 @@
   background-color: #81b3d2;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
+    outline: none;
     background-color: #669ec0;
   }
 
   &:active {
     color: fade(#ffffff, 30%);
-    background-color: #5496BD;
+    background-color: #5496bd;
   }
 
   &:disabled {

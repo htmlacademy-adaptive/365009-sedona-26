@@ -1,5 +1,6 @@
-.text-input__decoration {
+.text-input__decorated {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -7,7 +8,6 @@
     width: 58px;
     height: 58px;
     background-color: #e6e6e6;
-
   }
 
   &--telephone::after {
@@ -49,6 +49,10 @@
   background-color: #f2f2f2;
   border: none;
 
+  &--decorated {
+    padding-right: 58px;
+  }
+
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -62,5 +66,9 @@
     background-color: #ffffff;
     outline: 4px solid #e5e5e5;
     outline-offset: -4px;
+  }
+
+  &:focus:placeholder-shown {
+    outline: 2px solid #81b3d2;
   }
 }

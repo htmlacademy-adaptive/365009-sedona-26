@@ -37,7 +37,12 @@
 
   &:active:not([class$="--current"]) {
     color: fade(#ffffff, 30%);
-    background-color: #5496BD;
+    background-color: #5496bd;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: #669ec0;
   }
 }
 
@@ -95,6 +100,11 @@
 
     &--current {
       color: #766357;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: #e5e5e5;
     }
   }
 }

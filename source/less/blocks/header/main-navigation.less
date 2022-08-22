@@ -68,8 +68,12 @@
     display: block;
   }
 
+  .main-navigation__toggle:focus-visible {
+    outline: none;
+  }
 
-  .main-navigation__toggle:hover .main-navigation__icon {
+  .main-navigation__toggle:hover .main-navigation__icon,
+  .main-navigation__toggle:focus-visible .main-navigation__icon {
     fill-opacity: 60%;
   }
 
