@@ -1,11 +1,32 @@
 .map {
+  position: relative;
   height: 350px;
-  background-image: url("/img/map-desktop.jpg");
+  background-image: url("/img/map.png");
   background-repeat: no-repeat;
   background-position: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    width: 27px;
+    height: 27px;
+    margin-left: -15px;
+    background-color: #81b3d3;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/map@2x.png");
+  }
 }
 
 .map__interactive {
+  position: relative;
   display: block;
   border: none;
+  z-index: 5;
 }

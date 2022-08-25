@@ -11,7 +11,8 @@
 
 .advantages-list__image {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,7 +24,7 @@
 
   .advantages-list__detail {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     width: 100%;
 
     &--reverse {
@@ -42,5 +43,10 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+  }
+
+  .advantages-list__image {
+    width: 800px;
+    height: 256px;
   }
 }

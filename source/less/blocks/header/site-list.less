@@ -31,11 +31,11 @@
   padding: 17px 20px 12px 20px;
   background-color: #81b3d2;
 
-  &:hover:not([class$="--current"]) {
+  &:hover[href] {
     background-color: #669ec0;
   }
 
-  &:active:not([class$="--current"]) {
+  &:active[href] {
     color: fade(#ffffff, 30%);
     background-color: #5496bd;
   }
@@ -88,12 +88,12 @@
     padding: 18px 20px 17px 20px;
     background-color: #ffffff;
 
-    &:hover:not([class$="--current"]) {
+    &:hover[href] {
       color: #81b3d2;
       background-color: #ffffff;
     }
 
-    &:active:not([class$="--current"]) {
+    &:active[href] {
       color: fade(#000000, 30%);
       background-color: #ffffff;
     }

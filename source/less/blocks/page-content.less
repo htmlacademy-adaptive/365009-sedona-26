@@ -1,9 +1,17 @@
+.page-content {
+  flex-grow: 1;
+}
+
 .page-content__logo-wrapper {
-  text-align: center;
-  padding-top: 90px;
-  padding-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 90px;
+  // padding-bottom: 85px;
+  min-height: 389px;
   margin-bottom: 35px;
-  background-image: url("../../img/background-image-mobile-1.jpg");
+  background-image: url("/img/background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11,10 +19,17 @@
   clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
 
   &--inner {
-    background-image: url("../../img/background-image-mobile-2.jpg");
-    padding-top: 52px;
-    padding-bottom: 67px;
+    min-height: 158px;
+    background-position: bottom;
+    background-size: 901px auto;
+    // background-image: url("../../img/background-image-mobile-2.jpg");
+    // padding-top: 52px;
+    // padding-bottom: 67px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0 85%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/background-mobile@2x.jpg");
   }
 }
 
@@ -48,17 +63,34 @@
 
 @media (min-width: @tablet-width) {
   .page-content__logo-wrapper {
-    padding-top: 77px;
-    padding-bottom: 91px;
+    // padding-top: 77px;
+    // padding-bottom: 91px;
+    min-height: 518px;
     margin-bottom: 47px;
-    background-image: url("../../img/background-image-desktop.jpg");
+    background-size: 1200px auto;
+    background-image: url("/img/background-desktop.jpg");
     clip-path: polygon(0% 0%, 0 94%, 4% 95%, 4% 89%, 50% 100%, 96% 89%, 96% 95%, 100% 94%, 100% 0%);
 
     &--inner {
-      padding-top: 95px;
-      padding-bottom: 117px;
+      min-height: 290px;
+      // padding-top: 95px;
+      // padding-bottom: 117px;
       clip-path: polygon(0% 0%, 0 94%, 4% 95%, 4% 89%, 50% 100%, 96% 89%, 96% 95%, 100% 94%, 100% 0%);
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/background-desktop@2x.jpg");
+    }
+  }
+
+  .page-content__main-logo {
+    width: 461px;
+    height: 350px;
+  }
+
+  .page-content__inner-logo {
+    width: 457px;
+    height: 77px;
   }
 
   .page-content__title {
@@ -85,13 +117,14 @@
 
 @media (min-width: @desktop-width) {
   .page-content__logo-wrapper {
-    padding-top: 78px;
-    padding-bottom: 90px;
+    // padding-top: 78px;
+    // padding-bottom: 90px;
     clip-path: polygon(0 0, 100% 0, 100% 88.2%, 79.2% 93.2%, 79.2% 88.2%, 50% 100%, 20.8% 88.2%, 20.8% 93.2%, 0 88.2%);
 
     &--inner {
-      padding-top: 101px;
-      padding-bottom: 120px;
+      min-height: 301px;
+      // padding-top: 101px;
+      // padding-bottom: 120px;
     }
   }
 
