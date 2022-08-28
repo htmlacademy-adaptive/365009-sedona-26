@@ -2,11 +2,13 @@
   display: block;
   width: 185px;
 
-  &:hover {
+  &:hover[href],
+  &:focus[href] {
     opacity: 60%;
+    outline: none;
   }
 
-  &:active {
+  &:active[href] {
     opacity: 30%;
   }
 }

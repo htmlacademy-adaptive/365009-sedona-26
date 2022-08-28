@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -67,7 +71,13 @@
                 <span class="advantage__number">&mdash; №1 &mdash;</span>
                 <p class="advantage__description">Седона не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="advantages-list__image" src="./img/advantages-photo-mobile-1.jpg" width="520" height="260" alt="Дома на фоне гор.">
+              <div class="advantage-list__image-wrapper">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/advantage-photo-desktop-1.jpg, ./img/advantage-photo-desktop-1@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/advantage-photo-tablet-1.jpg, ./img/advantage-photo-tablet-1@2x.jpg 2x">
+                  <img class="advantages-list__image" src="/img/advantage-photo-mobile-1.jpg" srcset="/img/advantage-photo-mobile-1@2x.jpg 2x" alt="Дома на фоне гор.">
+                </picture>
+              </div>
             </div>
             <ul class="advantages-list__sublist advantages-list">
               <li class="advantages-list__item advantage advantage--reason advantage--housing">
@@ -90,7 +100,13 @@
               <span class="advantage__number">&mdash; №2 &mdash;</span>
               <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages-list__image" src="./img/advantages-photo-mobile-2.jpg" width="520" height="260" alt="Мост дьявола.">
+            <div class="advantage-list__image-wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./img/advantage-photo-desktop-2.jpg, ./img/advantage-photo-desktop-2@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./img/advantage-photo-tablet-2.jpg, ./img/advantage-photo-tablet-2@2x.jpg 2x">
+                <img class="advantages-list__image" src="/img/advantage-photo-mobile-2.jpg" srcset="/img/advantage-photo-mobile-2@2x.jpg 2x" alt="Мост дьявола.">
+              </picture>
+            </div>
           </li>
           <li class="advantages-list__item advantage advantage--no-detail">
             <h3 class="advantage__title">Небольшая площадь</h3>

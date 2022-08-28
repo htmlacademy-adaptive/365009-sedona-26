@@ -13,15 +13,42 @@
 }
 
 .video__play {
+  position: relative;
   display: block;
   width: 100%;
   min-height: 177px;
   padding: 0;
   border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 54px;
+    margin-top: -27px;
+    margin-left: -24px;
+    background-image: url("/img/play-button.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .video__image {
   display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: @tablet-width) {
@@ -43,6 +70,12 @@
     max-width: 800px;
     min-height: 500px;
     margin: 0 auto;
+  }
+
+  .video__image {
+    display: block;
+    min-height: 500px;
+    object-fit: cover;
   }
 }
 
