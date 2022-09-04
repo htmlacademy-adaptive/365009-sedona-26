@@ -25,14 +25,6 @@
     z-index: 2;
   }
 
-  .main-navigation--nojs .main-navigation__list {
-    position: static;
-  }
-
-  .main-navigation--nojs .main-navigation__toggle {
-    display: none;
-  }
-
   .main-navigation--closed .main-navigation__list {
     display: none;
   }
@@ -44,6 +36,15 @@
   .main-navigation--opened .main-navigation__toggle {
     color: #ffffff;
     background-color: #81b3d2;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__list {
+    display: block;
+    position: static;
   }
 
   .main-navigation__icon {
