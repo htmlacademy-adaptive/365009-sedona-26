@@ -38,7 +38,7 @@ export const html = () => {
 
 // Scripts
 
-export const script = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'));
@@ -46,19 +46,19 @@ export const script = () => {
 
 // Images
 
-// export const optimizeImages = () => {
-//   return gulp.src('source/img/*.{jpg,png}')
-//   .pipe(squoosh())
-//   .pipe(gulp.dest('build/img'));
-// }
+export const optimizeImages = () => {
+  return gulp.src('source/img/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'));
+}
 
-const images = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png,svg}')
   .pipe(gulp.dest('build/img'));
 }
 
 export const createWebp = () => {
-  return gulp.src('source/img/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp:{}
   }))
@@ -68,7 +68,7 @@ export const createWebp = () => {
 // Svg
 
 export const svg = () => {
-  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
@@ -97,7 +97,7 @@ const copy = (done) => {
   done();
 }
 
-  // Clean
+// Clean
 
 export const clean = () => {
   return del('build');
@@ -117,14 +117,52 @@ const server = (done) => {
   done();
 }
 
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+  }
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+);
+
+  // Default
 
 export default gulp.series(
-  html, styles, script, images, createWebp, svg, sprite, copy, clean, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+  gulp.series(
+  server,
+  watcher
+));
