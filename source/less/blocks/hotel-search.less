@@ -10,6 +10,10 @@
   margin-bottom: 32px;
 }
 
+.hotel-search__description br {
+  display: none;
+}
+
 .hotel-search__button {
   max-width: 458px;
   margin: 0 auto;
@@ -22,11 +26,21 @@
 
   .hotel-search__subtitle {
     max-width: 500px;
-    margin: 0 auto 24px;
+    margin: 0 auto 32px;
   }
 
   .hotel-search__description {
     max-width: 500px;
-    margin: 0 auto 40px;
+    margin: 0 auto 43px;
+  }
+
+  .hotel-search__description br {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotel-search__description {
+    margin-bottom: 48px;
   }
 }

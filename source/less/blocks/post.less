@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  padding: 24px 20px 25px 20px;
+  padding: 25px 20px 23px 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -33,7 +33,7 @@
 .post__link {
   position: relative;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .post__link:focus {
@@ -63,19 +63,20 @@
 
 .post__image {
   display: block;
+  min-height: 280px;
 }
 
 @media (min-width: @tablet-width) {
   .post {
     padding: 0;
-    border-top: none;
+    border-bottom: none;
   }
 
   .post__text-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 22px 20px 15px 22px;
+    padding: 22px 20px 16px 20px;
     background-color: #f2f2f2;
 
     &--darker {
@@ -116,6 +117,8 @@
     position: absolute;
     bottom: 0;
     max-height: 50%;
+    padding-top: 20px;
+    padding-bottom: 18px;
     overflow: auto;
     background-color: fade(#000000, 30%);
     z-index: 15;

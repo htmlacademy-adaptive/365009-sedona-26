@@ -8,8 +8,8 @@
     position: absolute;
     display: block;
     color: #81b3d2;
-    width: 54px;
-    height: 54px;
+    width: 63px;
+    height: 55px;
     padding: 0;
     background-color: #ffffff;
     border: none;
@@ -25,14 +25,6 @@
     z-index: 2;
   }
 
-  .main-navigation--nojs .main-navigation__list {
-    position: static;
-  }
-
-  .main-navigation--nojs .main-navigation__toggle {
-    display: none;
-  }
-
   .main-navigation--closed .main-navigation__list {
     display: none;
   }
@@ -44,6 +36,15 @@
   .main-navigation--opened .main-navigation__toggle {
     color: #ffffff;
     background-color: #81b3d2;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__list {
+    display: block;
+    position: static;
   }
 
   .main-navigation__icon {
@@ -75,11 +76,11 @@
 
   .main-navigation__toggle:hover .main-navigation__icon,
   .main-navigation__toggle:focus-visible .main-navigation__icon {
-    fill-opacity: 60%;
+    opacity: 60%;
   }
 
   .main-navigation__toggle:active .main-navigation__icon {
-    fill-opacity: 30%;
+    opacity: 30%;
   }
 }
 

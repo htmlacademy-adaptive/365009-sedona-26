@@ -1,7 +1,7 @@
 .button {
   display: block;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   text-align: center;
   font-weight: 700;
@@ -26,10 +26,16 @@
   &:disabled {
     background-color: #e5e5e5;
   }
+
+  &--modal {
+    font-size: 18px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .button {
+  .button--modal {
     font-size: 21px;
   }
 }

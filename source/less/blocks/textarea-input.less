@@ -29,7 +29,13 @@
     outline-offset: -4px;
   }
 
-  &:focus:placeholder-shown {
+  &:focus {
     outline: 2px solid #81b3d2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea-input__field {
+    min-height: 160px;
   }
 }

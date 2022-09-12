@@ -1,0 +1,64 @@
+.likes {
+  display: flex;
+  align-items: baseline;
+  max-width: 100px;
+}
+
+.likes__button {
+  display: block;
+  color: fade(#000000, 30%);
+  padding: 0;
+  margin-right: 14px;
+  border: none;
+  background-color: transparent;
+}
+
+.likes__button:hover,
+.likes__button:focus-visible {
+  outline: none;
+  color: fade(#000000, 60%);
+}
+
+.likes__button:active {
+  color: fade(#000000, 15%);
+}
+
+.likes__icon {
+  display: block;
+}
+
+.likes__counter {
+  color: #000000;
+  font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .likes {
+    align-items: center;
+  }
+
+  .likes__button {
+    padding-bottom: 9px;
+    margin-right: 9px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .likes__button {
+    color: #ffffff;
+  }
+
+  .likes__counter {
+    color: #ffffff;
+  }
+
+  .likes__button:hover,
+  .likes__button:focus-visible {
+    outline: none;
+    color: fade(#ffffff, 60%);
+  }
+
+  .likes__button:active {
+    color: fade(#ffffff, 30%);
+  }
+}
