@@ -21,12 +21,19 @@
 
   &--inner {
     min-height: 158px;
-    margin-bottom: 38px;
     background-position: bottom;
     background-size: 901px auto;
     padding-top: 52px;
     padding-bottom: 67px;
-    clip-path: polygon(0 0,100% 0,100% 83%,50% 100%,0 83%);
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+  }
+
+  &--form {
+    margin-bottom: 37px;
+  }
+
+  &--gallery {
+    margin-bottom: 38px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -43,8 +50,12 @@
   max-width: 80%;
   margin: 0 auto 35px;
 
-  &--inner {
-    margin-bottom: 24px;
+  &--form {
+    margin-bottom: 23px;
+  }
+
+  &--gallery {
+    margin-bottom: 25px;
   }
 }
 
@@ -54,16 +65,6 @@
 
 .page-content__hotel-search {
   margin-bottom: 31px;
-}
-
-.page-content__modal-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: fade(#000000, 30%);
-  z-index: 10;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,20 +77,27 @@
   }
 
   .page-content__logo-wrapper {
+    min-height: 518px;
     padding-top: 77px;
     padding-bottom: 90px;
-    min-height: 518px;
     margin-bottom: 49px;
     background-size: 1200px auto;
     background-image: url("/img/background-desktop.jpg");
-    clip-path: polygon(0 0,0 93%,4.4% 93.5%,4.4% 89%,50% 100%,95.7% 89%,95.7% 93.5%,100% 93%,100% 0);
+    clip-path: polygon(0 0, 0 93%, 4.4% 93.5%, 4.4% 89%, 50% 100%, 95.7% 89%, 95.7% 93.5%, 100% 93%, 100% 0);
 
     &--inner {
       min-height: 290px;
       padding-top: 95px;
       padding-bottom: 117px;
+      clip-path: polygon(0 0, 0 87.3%, 4.4% 88.5%, 4.4% 80.5%, 50% 100%, 95.6% 80.5%, 95.6% 88.5%, 100% 87.3%, 100% 0);
+    }
+
+    &--form {
       margin-bottom: 64px;
-      clip-path: polygon(0 0,0 87.3%,4.4% 88.5%,4.4% 80.5%,50% 100%,95.6% 80.5%,95.6% 88.5%,100% 87.3%,100% 0)
+    }
+
+    &--gallery {
+      margin-bottom: 66px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -101,7 +109,7 @@
     &--main {
       width: 461px;
       height: 350px;
-   }
+    }
 
     &--inner {
       width: 457px;
@@ -112,12 +120,12 @@
   .page-content__title {
     margin-bottom: 29px;
 
-    &--inner {
+    &--form {
       margin-bottom: 23px;
     }
 
     &--gallery {
-      margin-bottom: 35px;
+      margin-bottom: 33px;
     }
   }
 
@@ -133,13 +141,13 @@
 @media (min-width: @desktop-width) {
   .page-content__logo-wrapper {
     margin-bottom: 60px;
-    clip-path: polygon(0 0,100% 0,100% 89%,79.2% 93.4%,79.2% 89%,50% 100%,20.8% 89%,20.8% 93.4%,0 89%);
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 79.2% 93.4%, 79.2% 89%, 50% 100%, 20.8% 89%, 20.8% 93.4%, 0 89%);
 
     &--inner {
       min-height: 301px;
       padding-top: 101px;
       padding-bottom: 120px;
-      clip-path: polygon(0 0,100% 0,100% 81%,79.2% 89%,79.2% 81%,50% 100%,20.8% 81%,20.8% 89%,0 81%);
+      clip-path: polygon(0 0, 100% 0, 100% 81%, 79.2% 89%, 79.2% 81%, 50% 100%, 20.8% 81%, 20.8% 89%, 0 81%);
     }
 
     &--form {
@@ -158,8 +166,9 @@
 
   .page-content__title {
     max-width: 40%;
-    &--inner {
-      margin-bottom: 34px;
+
+    &--form {
+      margin-bottom: 33px;
     }
 
     &--gallery {
