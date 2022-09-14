@@ -27,15 +27,28 @@
     background-color: #e5e5e5;
   }
 
-  &--modal {
-    font-size: 18px;
+  &--form {
     padding-top: 18px;
     padding-bottom: 14px;
+  }
+
+  &--modal {
+    padding-top: 18px;
+    padding-bottom: 14px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .button--modal {
-    font-size: 21px;
+  .button {
+    &--form {
+      padding-top: 20px;
+      padding-bottom: 12px;
+      padding-right: 26px;
+    }
+
+    &--modal {
+      font-size: 21px;
+    }
   }
 }
